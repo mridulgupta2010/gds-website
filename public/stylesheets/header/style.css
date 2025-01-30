@@ -12,13 +12,13 @@ header {
 header nav {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 1000;
-    gap: 10vw;
+    /* gap: 10vw; */
     margin: 0;
-    padding: 0;
+    padding: 3rem;
 }
 
 /* Common CSS */
