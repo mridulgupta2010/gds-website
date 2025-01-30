@@ -55,7 +55,7 @@ app.get("/product", function(req,res){
 
 
 async function geocodeAddress(address) {
-    const apiKey = GKEY;
+    const apiKey = process.env.GKEY;
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
     
     try {

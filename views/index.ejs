@@ -185,6 +185,9 @@
 <link rel="stylesheet" href="stylesheets/index/store-locater.css">
 <script>
     async function handleFormSubmit(event) {
+         // Scroll to the map
+    document.getElementById('map').scrollIntoView({ behavior: 'smooth' });
+
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);
@@ -204,6 +207,9 @@
     const stores = await response.json();
     updateStoreList(stores);
     updateMap(stores);
+
+   
+
 }
 
 function updateStoreList(stores) {
