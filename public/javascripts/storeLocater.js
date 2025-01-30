@@ -6,7 +6,7 @@ let markers = [];
 function initMap() {
     // Create the map with initial settings
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 5.09,
+        zoom: 0,
         center: { lat: -26.09293, lng: 134.9437842 }
     });
     infoWindow = new google.maps.InfoWindow();

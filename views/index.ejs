@@ -230,5 +230,13 @@ function updateMap(stores) {
 }
 </script>
 
+<script>
+    document.addEventListener('focusout', function(e) {
+    // Resets the viewport scale after input focus
+    var viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0');
+});
+</script>
+
 <%- include("partials/footer") %>
 
