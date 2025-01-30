@@ -1,0 +1,234 @@
+<%- include("partials/header") %>
+<!-- <%- include("partials/loader.ejs") %> -->
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="stylesheets/index/index.css">
+<link rel="stylesheet" href="stylesheets/index/aurora.css">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy5CztjdgkVx6U9Lva7mkbRg83C-8AVg8&libraries=places&callback=initMap&solution_channel=GMP_codelabs_simplestorelocator_v1_a">
+</script>
+<script src="javascripts/storeLocater.js"></script>
+<!-- main div content starts -->
+<div id="main" class="main-height">
+    
+    <!-- div-item-1 starts -->
+    <div class="div-item-wrapper div-item-1">
+        <div class="div-item-1-inner">
+            <img src="images/index/div_item_img_1.png" alt="">
+            <div class="title">
+                <h1>Automating world, one place at a time.</h1>
+            </div>
+        </div>
+        <div class="store-locator-wrapper container">
+            <div style="width: 100%;">
+                <div style="padding: 20px;cursor: pointer;"  data-toggle="collapse" data-target="#locator-nav">
+                    <h2 style="width: 100%; text-align: center; text-wrap: nowrap;"><b>Where to buy?</b></h2>
+                    <p style="width: 100%; text-align: center;">We love our dealers and want to help you find one near you. You can also view our Service/Installation partners by city, state and postcode.</p>
+                </div>
+            </div>
+            <form class="store-locator-nav row collapse" id="locator-nav" onsubmit="handleFormSubmit(event)">
+                    <input type="text" id="search-location" name="location" class="input col-xs-12 col-sm-4 search" placeholder="Enter your address" required>
+                    <select id="search-support" name="supportType" class="input col-xs-12 col-sm-2 search">
+                        <option value="">Select Support</option>
+                        <option value="supply">Supply</option>
+                        <option value="install">Install</option>
+                        <option value="both">Both supply & install</option>
+                    </select>
+                    <select id="search-range" name="range" class="input col-xs-12 col-sm-2 search">
+                        <option value="">Range</option>
+                        <option value="5">5Km</option>
+                        <option value="10">10Km</option>
+                        <option value="50">50Km</option>
+                    </select>
+                    <select id="search-type" name="type" class="input col-xs-12 col-sm-2 search">
+                        <option value="">Type</option>
+                        <option value="gate_drive_systems">Gate Drive Systems</option>
+                        <option value="nice">Nice</option>
+                        <option value="elero">Elero</option>
+                    </select>
+                    <button type="submit" class="col-xs-12 col-sm-1 search">Submit</button>
+            </form>
+            <div class="store-locator-map row d-block gy-5">
+                <div class="col-md-8 col-12 store-locater-list" style="background-color: white; border-radius: 4rem; height: 20vw; min-height: 400px;">
+                    <div>
+
+                    </div>
+                </div>
+                <div id="map" class="col-md-4 col-12" style=" height: 20vw; min-height: 400px;" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></duv>
+            </div>
+        </div>
+    </div>
+    <!-- div-item-1 ends -->
+
+    <!-- div-item-2 starts -->
+     <div class="div-item-wrapper div-item-2">
+        <div class="container div-item-2-inner">
+            <div class="row">
+                <div class="col-lg-7 d-flex flex-column fl" style="padding: 10px; gap: 30px;">
+                    <div>
+                        <h2 style="font-size: 5rem; padding-left: 20px;">Innovation defines our automation!</h2>
+                        <p style="font-size: 16px; padding-left: 20px; margin-bottom: 30px;">Our second generation boom gate operators are now smarter and even more reliable.</p>
+                        <ul class="d-flex flex-column" style="gap: 10px;" style="list-style-type: none;">
+                            <li class="d-flex flex-row align-items-center" style="gap: 10px;">
+                                <img src="images/index/check.png" alt=""><span style="font-size: 16px;"> 100% Duty Cycle</span>
+                            </li>
+                            <li class="d-flex flex-row align-items-center" style="gap: 10px;">
+                                <img src="images/index/check.png" alt=""><span style="font-size: 16px;"> Iron enclosure</span>
+                            </li>
+                            <li class="d-flex flex-row align-items-center" style="gap: 10px;">
+                                <img src="images/index/check.png" alt=""><span style="font-size: 16px;"> After sales support</span>
+                            </li>
+                            <li class="d-flex flex-row align-items-center" style="gap: 10px;">
+                                <img src="images/index/check.png" alt=""><span style="font-size: 16px;"> Made in Australia</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="padding: 10px 30px;">
+                        <a id="boom-link" href="" style=" color: white; background-color: black; width: fit-content; padding: 10px 30px; border-radius: 30px; display: flex; gap: 20px; align-items: center;">
+                            <p style="color: white; font-size: 20px; text-wrap: nowrap;" >Start exploring</p>
+                            <i class="fa-solid fa-arrow-right" style="color: black; padding: 10px; border-radius: 50%; background-color: lightgray;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5" >
+                    <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" src="images/index/div_item_img_1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- div-item-2 ends -->
+
+    <!-- div-item-3 starts -->
+     <div class="div-item-wrapper div-item-3 container-fluid">
+        <div class="div-item-3-inner accessory-container row">
+            <div class="area area1">
+                
+            </div>
+            <div class="area area2"></div>
+            <div class="area area3">
+                <svg id="rotatingText" viewBox="0 0 200 200" width=auto height="100%">
+                    <defs>
+                      <path id="circle" d="M 100, 100
+                              m -75, 0
+                              a 75, 75 0 1, 0 150, 0
+                              a 75, 75 0 1, 0 -150, 0
+                              ">
+                      </path>
+                    </defs>
+                    <text font-size="25px" font-weight="700" fill="white">
+                        <textPath xlink:href="#circle" startOffset="0%" alignment-baseline="middle" side="right" dominant-baseline="central">
+                            We are original.
+                        </textPath>
+                        <textPath xlink:href="#circle" startOffset="52%" alignment-baseline="middle" side="right" dominant-baseline="central">
+                            Still the best.
+                        </textPath>
+                    </text>
+                  </svg>
+            </div>
+            <div class="area area4">
+                <!-- <div class="news-area">
+                    <h5>Announcements</h5>
+                    <p>Join Gate Drive Systems by Nice from August 19-23 at Stand N74 in Sydney for the Security Expo. Discover our latest advancements in home and industrial automation and learn how we can enhance your security and efficiency. See you there!</p>
+                    <i><b>Date:</b> 19-23 August</i>
+                    <i><b>Venue:</b> ICC Sydney</i>
+                </div> -->
+                <div class="tagline-area">
+                    <a href="" style="text-decoration: none; color: white; display: flex; align-items: center; justify-content: center;"><h2>Specified <br> for <br> Government <br> Projects <img style="transform: translateX(-15px) scale(0.6);" src="images/index/upper-right-arrow.png" alt=""></h2></a>
+                </div>
+            </div>
+            <div class="area area5"></div>
+            <div class="area area6"></div>
+            <div class="area area7">
+                <div class="image-container">
+                    <img src="images/index/area7-image-1.png" alt="Image Description">
+                    <img src="images/index/area7-image-1.png" alt="Another Image Description"> <!-- Add more images as needed -->
+                    <img src="images/index/area7-image-1.png" alt="Image Description">
+                </div>
+            </div>
+            <div class="area area8"></div>
+            <div class="area area9"></div>
+        </div>
+     </div>
+    <!-- div-item-3 ends -->
+
+    <!-- div-item-4 starts -->
+    <div class="div-item-wrapper div-item-4">
+      <div class="div-item-4-inner">
+          <div class="area-container">
+              <div class="content">
+                  <h1 class="title">Built to last generations.
+                      <div class="aurora">
+                          <div class="aurora__item"></div>
+                          <div class="aurora__item"></div>
+                          <div class="aurora__item"></div>
+                          <div class="aurora__item"></div>
+                      </div>
+                  </h1>
+                  <p class="subtitle">Learn more.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- div-item-4 ends -->
+
+    <!-- div-item-4 ends -->
+    <div class="div-item-wrapper div-item-5" style="height: 100vh;background: linear-gradient(180deg, #ffffff 0%, #000000 100%)">
+
+    </div>
+    <!-- div-item-4 ends -->
+
+
+</div>
+<!-- main div content ends -->
+<link rel="stylesheet" href="stylesheets/index/store-locater.css">
+<script>
+    async function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = {
+        location: formData.get('location'),
+        type: formData.get('type'),
+        range: formData.get('range')
+    };
+
+    const response = await fetch('/search-stores', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+    const stores = await response.json();
+    updateStoreList(stores);
+    updateMap(stores);
+}
+
+function updateStoreList(stores) {
+    const listDiv = document.getElementById('store-list');
+    listDiv.innerHTML = ''; // Clear previous entries
+    stores.forEach(store => {
+        const entry = document.createElement('div');
+        entry.textContent = `${store.name} - ${store.distance} km away`;
+        listDiv.appendChild(entry);
+    });
+}
+
+function updateMap(stores) {
+    // Ensure map is initialized and then add markers
+    stores.forEach(store => {
+        const position = new google.maps.LatLng(store.latitude, store.longitude);
+        const marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: store.name
+        });
+        map.setCenter(position); // Optionally set map center to first store or user location
+    });
+}
+</script>
+
+<%- include("partials/footer") %>
+

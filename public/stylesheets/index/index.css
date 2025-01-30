@@ -1,0 +1,320 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    background-color: white;
+    height: auto;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Main Container */
+#main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.div-item-wrapper {
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+}
+
+/*First Division CSS*/
+.div-item-1,.div-item-2,.div-item-3,.div-item-4 {
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-item-1-inner,.div-item-2-inner {
+    width: 100%;
+    position: relative;
+}
+
+.div-item-1-inner > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.div-item-1-inner > *, .div-item-2-inner > * {
+    min-height: 400px;
+}
+
+.div-item-1-inner .title {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/*Store Locator CSS*/
+.store-locator-wrapper {
+    position: relative;
+    top: -50px;
+    border-radius: 4rem;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.store-locator-nav {
+    padding: 20px 10px 20px 0;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.input,.search {
+    padding: 15px;
+    background-color: black;
+    color: lightgray;
+    border-radius: 50px;
+    border: none;
+}
+
+.store-locator-map {
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+}
+
+
+#map {
+    height: 40vh;
+    border-radius: 1rem;
+}
+
+.collapse {
+    display: none;
+}
+.collapse.in {
+    display: flex;
+}
+
+#boom-link:hover {
+    background-color: grey;
+}
+
+/*3rd Division of CSS*/
+
+.div-item-3-inner {
+    background-color: black;
+    border-radius: 3rem;
+    width: 100%;
+    height: 80vh;
+    min-height: 100px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+
+.accessory-container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "area1 area3 area7 area8"
+      "area1 area3 area7 area8"
+      "area2 area4 area7 area8"
+      "area2 area4 area7 area8"
+      "area2 area5 area9 area9"
+      "area2 area6 area9 area9";
+  }
+  
+  .area {
+    background-color: white;
+    border-radius: 3rem;
+  }
+
+  .area1 { grid-area: area1; }
+  
+  
+  .area2 { grid-area: area2; }
+  
+  .area3 { grid-area: area3;background-color: transparent; }
+  
+  .area4 { grid-area: area4; background-color: transparent;}
+  .area4:hover { background: rgba(255, 255, 255, 0.51);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.7px);
+    -webkit-backdrop-filter: blur(9.7px); color: white; transition-timing-function: all ease-in-out 0.5s; cursor: pointer;}
+  .news-area {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+  }
+  .tagline-area {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .area5 { grid-area: area5; }
+  
+  .area6 { grid-area: area6; }
+  
+  .area7 {
+    grid-area: area7;
+    overflow: hidden;  /* Hide anything outside the boundary of area7 */
+    position: relative; /* Position relative to allow absolute positioning of children */
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+.area7 .image-container {
+    display: flex;
+    width: 300%; /* Assume two images, adjust as needed */
+    height: 100%;
+    animation: slide 6s ease-in-out infinite; /* Adjust timing as needed */
+}
+
+.area7 .image-container img {
+    width: 33.33%; /* Each image takes up half of the image container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area of the container */
+}
+
+@keyframes slide {
+    0%, 28.88% {
+        transform: translateX(0);  /* Start position (first image visible) */
+    }
+   50.54%, 79.42% {
+        transform: translateX(-33.33%); /* Move to second image */
+    }
+
+   100% {
+        transform: translateX(-66.66%); /* Move to second image */
+    }
+}
+  
+  .area8 { grid-area: area8; }
+  
+  .area9 { grid-area: area9; }
+  
+  @media (max-width: 1000px) {
+    .div-item-3-inner {
+        height: 160vh;
+    }
+    .accessory-container {
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "area1 area3"
+          "area1 area3"
+          "area2 area4"
+          "area2 area4"
+          "area2 area5"
+          "area2 area6"
+          "area7 area8"
+          "area7 area8"
+          "area7 area8"
+          "area7 area8"
+          "area9 area9"
+          "area9 area9";
+    }
+}
+
+@media (max-width: 500px) {
+    .div-item-3-inner {
+        height: 320vh;
+    }
+    .accessory-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 4fr 2fr 2fr 1fr 1fr 4fr 4fr 2fr;
+        grid-template-areas:
+          "area1"
+          "area2"
+          "area3"
+          "area4"
+          "area5"
+          "area6"
+          "area7"
+          "area8"
+          "area9";
+    }
+}
+
+#rotatingText {
+    animation-name: rotate-circle;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes rotate-circle {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  /*Fourth Division*/
+
+  :root {
+    --white: #fff;
+    --black: #000;
+    --primary-light: #f9fafb;
+    --second-light: #f0f0f0;
+    --third-light: #DADBDB;
+    --primary-dark: #222;
+    --second-grey: #4f4f4f;
+    --first-shadow: rgba(0, 0, 0, 0.3);
+    --success: rgba(61, 168, 102, 0.6);
+    --error: rgba(168, 30, 14, 0.6);
+    --primary-color: #ffde59;
+    --second-color: #ffbd59;
+}
+
+select:focus, input:focus, button:focus {
+    outline: none;
+}
+
+  .div-item-4-inner {
+    background-color: #000;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    border-radius: 3rem;
+  }
+
+  .area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

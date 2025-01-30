@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nice Australia - GDS</title>
+        <link rel="stylesheet" href="stylesheets/header/style.css">
+        
+        <link rel="stylesheet" href="stylesheets/footer/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <style>
+        .fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+    </style>
+    <body>
+        <!-- <%- include("loader") %> -->
+        <div id="side-menu" class="side-menu">
+            <ul class="ul-side-menu list-style-none">
+                <li><a href="/" class="text-decoration-none">Home</a></li>
+                <li class="dropdown-submenu">
+                    <a id="commercial-submenu" href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#commercialSubmenu">Commercial</a>
+                    <ul class="collapse list-unstyled" id="commercialSubmenu">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#swingSubmenu"> Swing</a>
+                            <ul class="collapse list-unstyled" id="swingSubmenu">
+                                <li><a href="/product" class="text-decoration-none">GDS 4</a></li>
+                                <li><a href="#" class="text-decoration-none">GDS 6</a></li>
+                                <li><a href="#" class="text-decoration-none">GDS 7</a></li>
+                                <li><a href="#" class="text-decoration-none">GDS 8</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#slidingSubmenu"> Sliding</a>
+                            <ul class="collapse list-unstyled" id="slidingSubmenu">
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#lvlSubmenu">Low Voltage</a>
+                                    <ul class="collapse list-unstyled" id="lvlSubmenu">
+                                        <li><a href="/230lv-liag" class="text-decoration-none">230 LVL</a></li>
+                                        <li><a href="/450lv-liag" class="text-decoration-none">450 LVL</a></li>
+                                        <li><a href="/500lv-liag" class="text-decoration-none">500 LVL</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#beltSubmenu">Belt Drive</a>
+                                    <ul class="collapse list-unstyled" id="beltSubmenu">
+                                        <li><a style="color: black;"><b><u>240V</u></b></a></li>
+                                        <li><a href="#" class="text-decoration-none">450</a></li>
+                                        <li><a href="#" class="text-decoration-none">630</a></li>
+                                        <li><a style="color: black;text-wrap: nowrap;"><b><u>Low Voltage</u></b></a></li>
+                                        <li><a href="#" class="text-decoration-none">230</a></li>
+                                        <li><a href="#" class="text-decoration-none">450</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#chainSubmenu">Chain Drive</a>
+                                    <ul class="collapse list-unstyled" id="chainSubmenu">
+                                        <li><a style="color: black;"><b><u>Standard</u></b></a></li>
+                                        <li><a href="#" class="text-decoration-none">315</a></li>
+                                        <li><a href="#" class="text-decoration-none">630</a></li>
+                                        <li><a style="color: black;text-wrap: nowrap;"><b><u>Heavy Duty</u></b></a></li>
+                                        <li><a href="#" class="text-decoration-none">315 HD</a></li>
+                                        <li><a href="#" class="text-decoration-none">630 HD</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#barrierSubmenu"> Barrier</a>
+                            <ul class="collapse list-unstyled" id="barrierSubmenu">
+                                <li><a href="#" class="text-decoration-none">2nd Generation</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#industrialSubmenu">Information</a>
+                    <ul class="collapse list-unstyled" id="industrialSubmenu">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#tArticleSubmenu"> Articles</a>
+                            <ul class="collapse list-unstyled" id="tArticleSubmenu">
+                                <li><a href="#" class="text-decoration-none">Article 1</a></li>
+                                <li><a href="#" class="text-decoration-none">Article 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#brochureSubmenu"> Brochures</a>
+                            <ul class="collapse list-unstyled" id="brochureSubmenu">
+                                <li><a href="#" class="text-decoration-none">Brochure 1</a></li>
+                                <li><a href="#" class="text-decoration-none">Brochure 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#iManualSubmenu"> Manuals</a>
+                            <ul class="collapse list-unstyled" id="iManualSubmenu">
+                                <li><a href="#" class="text-decoration-none">Manual 1</a></li>
+                                <li><a href="#" class="text-decoration-none">Manual 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="text-decoration-none dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#gallerySubmenu"> Gallery</a>
+                            <ul class="collapse list-unstyled" id="gallerySubmenu">
+                                <li><a href="#" class="text-decoration-none">Images</a></li>
+                                <li><a href="#" class="text-decoration-none">Videos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#" class="text-decoration-none">Contact</a></li>
+                <li><a href="#" class="text-decoration-none">Warranty</a></li>
+            </ul>
+        </div>
+        
+        <header id="header" class="header-height">
+            <nav id="navbar" class="header-height">
+                <div class="header-height div-logo">
+                    <img class="logo header-height" src="images/logo/gdsbynice_rebrand_blueblack_png_2.png" alt="">
+                </div>
+                <div class="div-nav-menu header-height">
+                    <ul class="ul-nav-menu header-height">
+                        <li class="list-style-none header-height">
+                            <div class="navlink-div">
+                                <div class="link-div">
+                                    <a href="/" class="text-decoration-none">HOME</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-style-none header-height">
+                            <div class="navlink-div">
+                                <div class="link-div">
+                                    <a href="" class="text-decoration-none">COMMERCIAL</a>
+                                </div>
+
+                                <div id="commercial" class="dropdown-div">
+                                    <div>
+                                        <ul class="initial-ul">
+                                            <li class="list-style-none">
+                                                <b>Solutions</b>
+                                            </li>
+                                            <li id="swing" class="list-style-none">
+                                                <a href="" class="text-decoration-none" > Swing</a>
+                                            </li>
+                                            <li id="sliding">
+                                                <a href="" class="text-decoration-none" > Sliding</a>
+                                            </li>
+                                            <li id="barrier">
+                                                <a href="" class="text-decoration-none" > Barrier</a>
+                                            </li>
+                                        </ul>
+                                        <ul id="sliding-ul" class="sliding-ul">
+                                            <li class="list-style-none">
+                                                <b>Type</b>
+                                            </li>
+                                            <li id="sliding-std" style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Standard</a></li>
+                                            <li id="lvl" style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Low Voltage</a></li>
+                                            <li id="b-drive" style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Belt Drive</a></li>
+                                            <li id="c-drive" style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Chain Drive</a></li>
+                                        </ul>
+                                        <ul id="sliding-std-ul" class="sliding-ul std-ul">
+                                            <li class="list-style-none">
+                                                <b style="font-size: 20px;">Standard</b>
+                                            </li>
+                                            <li class="list-style-none">
+                                                <b>Inbuilt controls</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="/315lags" class="text-decoration-none"> 315LAGS</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="/450lags" class="text-decoration-none"> 450LAGS</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="/630lags" class="text-decoration-none"> 630LAGS</a></li>
+                                            <li class="list-style-none">
+                                                <b>External controls</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="/315liags" class="text-decoration-none"> 315LIAGS</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="/450liags" class="text-decoration-none"> 450LIAGS</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="/630liags" class="text-decoration-none"> 630LIAGS</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="/940piags" class="text-decoration-none"> 940PIAGS</a></li>
+                                        </ul>
+                                        <ul id="sliding-lowv-ul" class="sliding-ul lvl-ul">
+                                            <li class="list-style-none">
+                                                <b style="font-size: 20px;">Low Voltage</b>
+                                            </li>
+                                            <li class="list-style-none">
+                                                <b>Operators</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="/230lv-liag" class="text-decoration-none"> 230LVL</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="/450lv-liag" class="text-decoration-none"> 450LVL</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="/500lv-liag" class="text-decoration-none"> 500LVL</a></li>
+                                        </ul>
+                                        <ul id="sliding-bdrive-ul" class="sliding-ul bdrive-ul">
+                                            <li class="list-style-none">
+                                                <b style="font-size: 20px;">Belt Drive</b>
+                                            </li>
+                                            <li class="list-style-none">
+                                                <b>240V</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> 450</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> 630</a></li>
+                                            <li class="list-style-none">
+                                                <b>Low Voltage</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> 230</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> 450</a></li>
+                                        </ul>
+                                        <ul id="sliding-cdrive-ul" class="sliding-ul cdrive-ul">
+                                            <li class="list-style-none">
+                                                <b style="font-size: 20px;">Chain Drive</b>
+                                            </li>
+                                            <li class="list-style-none">
+                                                <b>Standard</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> 315</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> 630</a></li>
+                                            <li class="list-style-none">
+                                                <b>Heavy Duty</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> 315 HD</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> 630 HD</a></li>
+                                        </ul>
+                                        <ul id="swing-ul" class="swing-ul">
+                                            <li class="list-style-none">
+                                                <b>Swing Operator</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> GDS 4</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> GDS 6</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> GDS 7</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> GDS 8</a></li>
+                                        </ul>
+                                        <ul id="barrier-ul" class="barrier-ul">
+                                            <li class="list-style-none">
+                                                <b>Operator</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Gen 2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="list-style-none header-height">
+                            <div class="navlink-div">
+                                <div class="link-div">
+                                    <a href="" class="text-decoration-none">INFORMATION</a>
+                                </div>
+
+                                <div id="information" class="dropdown-div">
+                                    <div>
+                                        <ul class="initial-ul">
+                                            <li class="list-style-none">
+                                                <b>Information</b>
+                                            </li>
+                                            <li id="t-article" class="list-style-none">
+                                                <a href="" class="text-decoration-none" style="text-wrap: nowrap;" > Technical Articles</a>
+                                            </li>
+                                            <li id="i-manual">
+                                                <a href="" class="text-decoration-none" style="text-wrap: nowrap;" > Instruction Manuals</a>
+                                            </li>
+                                            <li id="brochure">
+                                                <a href="" class="text-decoration-none" style="text-wrap: nowrap;" > Brochures</a>
+                                            </li>
+                                            <li id="gallery">
+                                                <a href="" class="text-decoration-none" style="text-wrap: nowrap;" > Gallery</a>
+                                            </li>
+                                        </ul>
+                                        <ul id="t-article-ul" class="t-article-ul">
+                                            <li class="list-style-none">
+                                                <b>Topics</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Swing Gate Locks</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Chain Drive Operators</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Choosing Sliding gate Systems - Track or Contilever?</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Choosing Inbuilt or Seperate controls</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Choosing between articulated, linear and <br> underground Swing Gate Operators</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Limited Side Room Arm Options for Swing Gates</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Duty Cycle Explained</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Advantages of GDS Operators</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> The Speed of Sliding Gate Operators</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Which is better, Swing or Sliding Gates?</a></li>
+                                        </ul>
+                                        <ul id="gallery-ul" class="gallery-ul">
+                                            <li class="list-style-none">
+                                                <b>Topics</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Images</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Videos</a></li>
+                                        </ul>
+                                        <ul id="i-manual-ul" class="i-manual-ul">
+                                            <li class="list-style-none">
+                                                <b>Manuals</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Manual 1</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Manual 2</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Manual 3</a></li>
+                                        </ul>
+                                        <ul id="brochure-ul" class="brochure-ul">
+                                            <li class="list-style-none">
+                                                <b>Topics</b>
+                                            </li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Gate & Door Catalogue 2024</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Industrial Door</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Screen</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Industrial Sliding Gate Operators</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Industrial Swing Gate Operators</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Industrial Chain Drive Operators</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Industrial Belt Drive Operators</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Drive Bolt/Slim</a></li>
+                                            <li style="text-wrap:nowrap;"><a href="" class="text-decoration-none"> Barrier Gate Operating System</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-style-none header-height">
+                            <div class="navlink-div">
+                                <div class="link-div">
+                                    <a href="" class="text-decoration-none">WARRANTY</a>
+                                </div>
+
+                                <!-- <div id="warranty" class="dropdown-div">
+                                    <div></div>
+                                </div> -->
+                            </div>
+                        </li>
+
+                        <li class="list-style-none header-height">
+                            <div class="navlink-div">
+                                <div class="link-div">
+                                    <a href="" class="text-decoration-none">CONTACT</a>
+                                </div>
+
+                                <!-- <div id="contact" class="dropdown-div">
+                                    <div></div>
+                                </div> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="div-burger-menu header-height">
+                    <div class="burger">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                    <div id="reseller-btn-spot" >
+                        
+                    </div>
+                    <div id="nav-reseller-btn" class="reseller-btn">
+                        <a href="" class="text-decoration-none"><b>Become a reseller?</b></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+        

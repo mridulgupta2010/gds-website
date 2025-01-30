@@ -1,0 +1,71 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "geometry": {
+                "type": "Point",
+                "coordinates": [138.57310981002954,-34.96215087625225
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "category": "nice",
+                "supply":"true",
+                "install":"true",
+                "hours": "10am - 6pm",
+                "description": "Total Gate & Door",
+                "name": "Nice Reseller 1342",
+                "phone": "+44 20 1234 5678",
+                "storeid": "01"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [145.23222819892678, -38.0090767847252
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "category": "nice",
+                "hours": "10am - 6pm",
+                "description": "Eltrak Victoria",
+                "name": "Nice Reseller 0765",
+                "phone": "+44 20 1234 5678",
+                "storeid": "02"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [133.8633080798467,-23.6942987611779
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "category": "elero",
+                "hours": "10am - 6pm",
+                "description": "Bluedust",
+                "name": "Nice Reseller 0765",
+                "phone": "+44 20 1234 5678",
+                "storeid": "03"
+            }
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [116.082019,-25.0292339
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "category": "nice",
+                "hours": "10am - 6pm",
+                "description": "JB Automation",
+                "name": "Nice Reseller 0765",
+                "phone": "+44 20 1234 5678",
+                "storeid": "04"
+            }
+        }
+        
+    ]
+}
