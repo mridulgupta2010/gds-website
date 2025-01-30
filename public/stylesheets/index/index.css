@@ -42,6 +42,7 @@ p {
 .div-item-1-inner,.div-item-2-inner {
     width: 100%;
     position: relative;
+    margin: 0;
 }
 
 .div-item-1-inner > img {
