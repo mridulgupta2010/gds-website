@@ -21,7 +21,7 @@ app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
 
-const storesData = require('./public/stores/stores.json');
+const storesData = require('./stores/stores.json');
 
 app.get("/", function(req,res){
     res.render("index");
