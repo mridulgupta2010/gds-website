@@ -155,6 +155,7 @@ p {
   .area {
     background-color: white;
     border-radius: 3rem;
+    
   }
 
   .area1 { grid-area: area1; }
