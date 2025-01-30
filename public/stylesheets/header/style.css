@@ -151,6 +151,12 @@ header nav {
 
 .dropdown-div li a::before {
     content: "\00BB";
+    color: white;
+}
+
+#side-menu a:focus,#side-menu a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .ul-nav-menu .li {
@@ -161,6 +167,7 @@ header nav {
     transition: all 0.3s ease-in-out;
     border-radius: 15px;
     padding: 0 5px 0 5px ;
+    color: white;
 }
 
 
