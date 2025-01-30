@@ -31,7 +31,7 @@ p {
 
 /*First Division CSS*/
 .div-item-1,.div-item-2,.div-item-3,.div-item-4 {
-    width: 90%;
+    width: 95%;
     position: relative;
     display: flex;
     flex-direction: column;
