@@ -75,7 +75,7 @@ p {
 .store-locator-wrapper {
     position: relative;
     top: -50px;
-    border-radius: 4rem;
+    border-radius: 3rem;
     width: 100%;
     background-color: black;
     display: flex;
@@ -110,7 +110,7 @@ p {
 
 #map {
     height: 40vh;
-    border-radius: 1rem;
+    border-radius: 3rem;
 }
 
 .collapse {
